@@ -13,7 +13,7 @@ services:
     environment:
       APP_ENV: 'dev'
       APP_DEBUG: 1
-      TOTALY_CONFLICTED_ENV_VAR: 'foo'
+      APP_USER: 'Palianov Valery Andreevich'
 
   web:
     build:

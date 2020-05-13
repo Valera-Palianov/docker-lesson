@@ -1,36 +1,32 @@
-Docker and docker-compose class
+Тестовое задание по изучению Git и Docker
 ===============================
 
-Note about working user variables: you should export two variables at host machine — `DUID` (docker user id), variable with your current user ID and `DGID` (docker group id), variable with your current group.
+Тестовое задание для creative 
 
-These variables are uses for launch php-process in a container.
+## Список шагов
 
-For example:    
-```shell script
-export DUID=$(id -u) && export DGID=$(id -g)
-```
-
-## Run project locally
-
-1. Build project: 
-    ```shell script
-    docker-compose build
-    ```
-1. Launch project:
-    ```shell script
-    docker-compose up -d
-    ```
-1. Install packages:
-    ```shell script
-    docker-compose exec app composer install
-    ```
-1. Run tests:
-    ```shell script
-    docker-compose exec app vendor/bin/phpunit
-    ```
-
-After start docker-compose you will see in your browser the next one:
-
-![Screenshot_2020-05-12_at_15.12.54](/uploads/0ae4961e86a2bd8ddd5472de03351a71/Screenshot_2020-05-12_at_15.12.54.png)
-
-This is a page with information about server environment variables, request and response data.
+1. Склонировал репозиторий по ссылке
+2. Оказалось, что этот репозиторий не инициализирован, так что сделал git init и сделал первый комит
+3. Создал репозиторий на GitHub, добавил его как удаленный репозиторий для скаченного 
+4. Создал ветку dev и переключился на нее. 
+5. Добавил новую ENV переменную в конфигурацию докера, назвал ее APP_USER, задал значение
+6. Закомитил это изменение в ветке dev
+7. Создал ветку conflicted от ветки dev, сделал в ней изменения затрагивающие те же места того же файла.
+8. Сделал коммит, переключился обратно на dev
+9. Сделал merge с веткой conflicted. Видимо файлы оказались недостаточно конфликтные и git смог их объединить без конфликта
+10. Переключился обратно на ветку conflict и сделал еще более конфликтное изменение
+11. Снова смерджил dev с конфликт
+12. Опять получилось то же самое. Возможно проблема в том, что эта ветка conflicted отходит от ветки dev, а не от master
+13. Создаю новую ветку с конфликтом под названием conflicted2.0
+14. Переключился обратно на dev и откатил изменения до объединений командой revert
+15. Иронично, но это действие вызвало конфликт. Исправил
+16. Наконец-то получил свой конфликт. Исправил его.
+17. Запустил docker-compose командой docker-compose up -d
+18. Проверил работоспособность. Работает.
+19. Начал устанавливать зависимости для composer внутри контейнера
+20. Установил. Работает. ENV на своем месте. 
+22. Не совсем понял можно ли запушить сразу сборку из образов через compose, поэтому запушу только образ app который он создает
+21. Дал образу app свой тег
+22. Запушил в свой репозиторий по ссылке https://hub.docker.com/r/valerapalianov/docker-lesson-master_app
+23. Смерджил ветку dev с веткой мастер. Запушил в репозиторий по ссылке https://github.com/Valera-Palianov/docker-lesson
+24. Изменил README прямо из вестки master, а не из dev, надеясь что за это по голове не прилетит

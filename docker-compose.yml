@@ -13,7 +13,7 @@ services:
     environment:
       APP_ENV: 'dev'
       APP_DEBUG: 1
-      APP_USER: 'Palianov Valery Andreevich'
+      APP_USER: 'Totaly not Palianov Valery Andreevich. Another stranger'
 
   web:
     build:

@@ -13,6 +13,7 @@ services:
     environment:
       APP_ENV: 'dev'
       APP_DEBUG: 1
+      CONFLICT_ENV: 100500
 
   web:
     build:

@@ -30,3 +30,4 @@
 22. Запушил в свой репозиторий по ссылке https://hub.docker.com/r/valerapalianov/docker-lesson-master_app
 23. Смерджил ветку dev с веткой мастер. Запушил в репозиторий по ссылке https://github.com/Valera-Palianov/docker-lesson
 24. Изменил README прямо из вестки master, а не из dev, надеясь что за это по голове не прилетит
+25. Сделал еще один push, но со всеми локальными ветками. На всякий случай
